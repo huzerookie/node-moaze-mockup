@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Moaze</title>
+  <link rel="stylesheet" href="/nodemodules/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/nodemodules/font-awesome/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="/utils/css/style.css" />
+  <script src="/utils/js/moaze.js"></script>
+</head>
+
+<body>
+  <div class="container" style=' display:flex;
+    flex-direction: column; align-items:center;
+    min-height  : 100vh;'>
+    <div class="main-content" style='flex-grow:1;width:100%;'>
+      {{>header}}
+      <div class="moaze-list" style='transform: translate(5%,22%);'>
+        {{#moazeList}}
+        <div class="row">
+          <div class="col-md-8">
+            <h4><a href="/moaze/{{moazeId}}">{{moazeName}} &mdash; {{moazeLocation}}</a></h4>
+          </div>
+          <div class="col-md-4">
+            <a href='/downloadMultiple'><i class="fa fa-download" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        {{/moazeList}}
+      </div>
+    </div>
+    {{>footer}}
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mumineen</title>
+  <link rel="stylesheet" href="/nodemodules/bootstrap/dist/css/bootstrap.min.css" />
+</head>
+
+<body>
+  <div class="container" style=' display:flex;
+    flex-direction: column; align-items:center;
+    min-height  : 100vh;'>
+    <div class="main-content" style='flex-grow:1;width:100%;'>
+      {{>header}}
+      <div class="mumineen-list" style='transform: translate(39%,22%);'>
+        {{#mumineenList}}
+        <div class="row">
+          <div class="col-md-12">
+            <h4><a href="/downloadSingle?name={{mumineenName}}&id={{mumineenMoaze}}">{{mumineenName}}</a></h4>
+          </div>
+        </div>
+        {{/mumineenList}}
+      </div>
+    </div>
+    {{>footer}}
+  </div>
+</body>
+
+</html>

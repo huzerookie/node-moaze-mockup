@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <mate charest="utf-8" />
+    <title>Pdf</title>
+  </head>
+  <body>
+    <h1>{{mumineenName}}</h1>
+    <ul>
+      {{#each dataSet}}
+      <h2><strong>Q</strong>: {{this.question}}</h2>
+      <h2><strong>A</strong>: {{this.answer}}</h2>
+      <br />
+      {{/each}}
+    </ul>
+  </body>
+</html>
