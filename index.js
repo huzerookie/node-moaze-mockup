@@ -87,8 +87,8 @@ app.get("/downloadSingle", async (req, res) => {
   const uuid = uuidv4.v4();
   console.log(req.query.name + " " + req.query.id);
   await generatePDF.generatePDF(dataSet, req.query.name, uuid);
-  var file = fs.createReadStream(`${__dirname}\\pdfs\\${uuid}.pdf`);
-  var stat = fs.statSync(`${__dirname}\\pdfs\\${uuid}.pdf`);
+  var file = fs.createReadStream(`${__dirname}/pdfs/${uuid}.pdf`);
+  var stat = fs.statSync(`${__dirname}/pdfs/${uuid}.pdf`);
   res.setHeader("Content-Length", stat.size);
   res.setHeader("Content-Type", "application/pdf");
   res.setHeader("Content-Disposition", `attachment; filename=${uuid}.pdf`);
@@ -125,8 +125,8 @@ app.get("/downloadMultiple", async (req, res) => {
     `${__dirname}/zips/${folderName}`,
     `${__dirname}/zips/${folderName}.zip`
   );
-  var file = fs.createReadStream(`${__dirname}\\zips\\${folderName}.zip`);
-  var stat = fs.statSync(`${__dirname}\\zips\\${folderName}.zip`);
+  var file = fs.createReadStream(`${__dirname}/zips/${folderName}.zip`);
+  var stat = fs.statSync(`${__dirname}/zips/${folderName}.zip`);
   res.setHeader("Content-Length", stat.size);
   res.setHeader("Content-Type", "fileType");
   res.setHeader(
