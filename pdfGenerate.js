@@ -46,7 +46,6 @@ var generatePDF = (dataSet, mumineenName, uuid, folderName) => {
       });
   });
 };
-generatePDF(batulSet, "SomeName", "1234");
 module.exports = {
   generatePDF,
 };

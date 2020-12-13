@@ -29,28 +29,28 @@ app.use("/nodemodules", express.static(path.join(__dirname, "node_modules/")));
 //Index Page
 app.get("", (req, res) => {
   res.render("index", {
-    title: "Moaze Project Mockup",
+    title: "Mauze Project Mockup",
     copyrightName: "Huzefa",
   });
 });
 app.get("/jamiat/:id", (req, res) => {
   console.log("Jamiat ID:" + req.params.id);
   res.render("moaze", {
-    title: "Moaze",
+    title: "Mauze",
     copyrightName: "Huzefa",
     moazeList: [
       {
-        moazeName: "Moaze 1",
-        moazeLocation: "Madras",
+        moazeName: "Mauze 1",
+        moazeLocation: "Hyderabad",
         moazeId: 1,
       },
       {
-        moazeName: "Moaze 2",
-        moazeLocation: "Mumbai",
+        moazeName: "Mauze 2",
+        moazeLocation: "Vishakapatnam",
         moazeId: 2,
       },
       {
-        moazeName: "Moaze 3",
+        moazeName: "Mauze 3",
         moazeLocation: "Bangalore",
         moazeId: 3,
       },
