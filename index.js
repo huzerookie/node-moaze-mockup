@@ -60,7 +60,7 @@ app.get("/jamiat/:id", (req, res) => {
 app.get("/moaze/:id", (req, res) => {
   console.log("Moaze ID:" + req.params.id);
   res.render("mumineen", {
-    title: "Committe Member Responses",
+    title: "Committe Members",
     copyrightName: "Huzefa",
     mumineenList: [
       {

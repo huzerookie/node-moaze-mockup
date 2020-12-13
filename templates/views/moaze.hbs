@@ -20,12 +20,12 @@
       <div class="moaze-list" style='transform: translate(5%,22%);'>
         {{#moazeList}}
         <div class="row">
-          <div class="col-md-8">
-            <h4><a href="/moaze/{{moazeId}}">{{moazeName}} &mdash; {{moazeLocation}}</a></h4>
+          <div class="col-md-8 col-xs-8">
+            <h4><a href="/moaze/{{moazeId}}">{{moazeName}} &mdash; {{moazeLocation}}</a>
+              <a href='/downloadMultiple'><i class="fa fa-download" aria-hidden="true"></i></a>
+            </h4>
           </div>
-          <div class="col-md-4">
-            <a href='/downloadMultiple'><i class="fa fa-download" aria-hidden="true"></i></a>
-          </div>
+
         </div>
         {{/moazeList}}
       </div>
